@@ -7,9 +7,13 @@ For install this configuration you need a NerdFont and Vim-Plug
 
 ## An example Screen Shot 
 
-![Captura de los Plugins](docs/plugins1.png)
+![Captura de los Plugins](docs/plugins4.png)
+
+![Captura 1](docs/plugins2.png)
 
 ![Captura 2](docs/plugins2.png)
+
+![Captura 3](docs/plugins2.png)
 
 ## How install
 
