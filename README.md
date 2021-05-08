@@ -25,11 +25,11 @@
  ```
 
  ```bash
-:Install Vim Plug
+Install Vim Plug
  ```
 
  ```bash
- Run the command PlugInstall
+ Run the command :PlugInstall
   ```
 
  ```
