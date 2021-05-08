@@ -1,11 +1,9 @@
-# My Portable Neovim Config
-
 ![Logo NeoVim](https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Neovim-logo.svg/1280px-Neovim-logo.svg.png)
 
-For install this configuration you need a NerdFont and Vim-Plug
+## For install this configuration you need a NerdFont and Vim-Plug
 
-
-## An example Screen Shot 
+#
+# An example Screen Shot 
 
 ![Captura de los Plugins](docs/plugins4.png)
 
@@ -17,16 +15,26 @@ For install this configuration you need a NerdFont and Vim-Plug
 
 ## How install
 
-1. Clone my repository
+```bash
+   git clone https://github.com/manuelduarte077/nvim
+```
 
-2. Paste in your folder
 
-3. Install Vim Plug
+ ```bash
+ Paste in your folder
+ ```
 
-4. Run the command PlugInstall
+ ```bash
+:Install Vim Plug
+ ```
 
-5. Exit of vim or neovim and all is installed
+ ```bash
+ Run the command PlugInstall
+  ```
 
+ ```
+ Exit of vim or neovim and all is installed
+ ```
 
 
 
