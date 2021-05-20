@@ -57,6 +57,16 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 "SYTAXYS 
 Plug 'sheerun/vim-polyglot'
+Plug 'valloric/youcompleteme'
+Plug 'stephpy/vim-php-cs-fixer'
+
+Plug 'noahfrederick/vim-laravel'
+Plug 'jwalton512/vim-blade'
+Plug 'stanangeloff/php.vim'
+Plug 'yaegassy/coc-blade-formatter'
+Plug 'yaegassy/coc-blade-linter'
+Plug 'yaegassy/coc-htmldjango'
+Plug 'iamcco/coc-tailwindcss'
 
 "NERD COMMENTER
 Plug 'preservim/nerdcommenter' 
