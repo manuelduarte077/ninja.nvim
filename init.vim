@@ -20,6 +20,7 @@ set laststatus=2
 set backspace=2
 set guioptions-=T
 set guioptions-=L
+
 imap jk <Esc>
 imap <C-c> <Esc>l
 xnoremap K :move '<-2<CR>gv-gv
