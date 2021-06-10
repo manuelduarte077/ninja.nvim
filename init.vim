@@ -57,14 +57,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 "SYTAXYS 
 Plug 'sheerun/vim-polyglot'
-Plug 'valloric/youcompleteme'
-Plug 'stephpy/vim-php-cs-fixer'
 
-Plug 'noahfrederick/vim-laravel'
-Plug 'jwalton512/vim-blade'
-Plug 'stanangeloff/php.vim'
-Plug 'yaegassy/coc-blade-formatter'
-Plug 'yaegassy/coc-blade-linter'
 Plug 'yaegassy/coc-htmldjango'
 Plug 'iamcco/coc-tailwindcss'
 
@@ -341,7 +334,6 @@ endfunction
 autocmd FileType go nmap <leader>b :<C-u>call <SID>build_go_files()<CR>
 autocmd FileType go nmap <leader>r  <Plug>(go-run)
 autocmd FileType go nmap <leader>t  <Plug>(go-test)
-
 "----------------------------------------------------- VIM CLAP
 
 let g:clap_popup_cursor_shape       = ''
