@@ -55,6 +55,7 @@ Plug 'josa42/vim-lightline-coc'
 "COC
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
+
 "SYTAXYS 
 Plug 'sheerun/vim-polyglot'
 
