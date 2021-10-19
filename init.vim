@@ -1,4 +1,4 @@
-"---------------------------------VIM CONFIGURATION----------------------------
+"-------------------------------VIM CONFIGURATION----------------------------
 syntax on
 filetype plugin indent on
 set nocompatible
