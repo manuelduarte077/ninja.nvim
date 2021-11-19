@@ -98,6 +98,9 @@ Plug 'github/copilot.vim'
 "" WakaTime
 Plug 'wakatime/vim-wakatime'
 
+"" Dart Languaje
+Plug 'dart-lang/dart-vim-plugin'
+
 
 call plug#end()
 
