@@ -101,8 +101,26 @@ Plug 'wakatime/vim-wakatime'
 "" Dart Languaje
 Plug 'dart-lang/dart-vim-plugin'
 
+"" Dart/Flutter
+Plug 'thosakwe/vim-flutter'
+Plug 'natebosch/vim-lsc'
+Plug 'natebosch/vim-lsc-dart'
+
 
 call plug#end()
+
+"--------------------------------------------Enable Flutter Menu
+" call FlutterMenu()
+
+" Some of these key choices were arbitrary;
+" it's just an example.
+nnoremap <leader>fa :FlutterRun<cr>
+nnoremap <leader>fq :FlutterQuit<cr>
+nnoremap <leader>fr :FlutterHotReload<cr>
+nnoremap <leader>fR :FlutterHotRestart<cr>
+nnoremap <leader>fD :FlutterVisualDebug<cr>
+
+
 
 "--------------------------------------------SHORTCUTS PLUGINS AND VIM
 set encoding=UTF-8
@@ -129,6 +147,11 @@ let g:gruvbox_material_disable_italic_comment = 1
 let g:gruvbox_contrast_dark = 'hard'
 let ayucolor="dark"
 colorscheme gruvbox 
+
+" Flutter
+let g:dart_format_on_save = 1
+"nnoremap nmap <leader>a  <Plug>(coc-codeaction-selected)
+
 
 "-------------------------------------------------LIGHTLINE CONFIG
 
