@@ -118,7 +118,7 @@ nnoremap <leader>fa :FlutterRun<cr>
 nnoremap <leader>fq :FlutterQuit<cr>
 nnoremap <leader>fr :FlutterHotReload<cr>
 nnoremap <leader>fR :FlutterHotRestart<cr>
-nnoremap <leader>fD :FlutterVisualDebug<cr>
+nnoremap <leader>fd :FlutterVisualDebug<cr>
 
 
 
@@ -150,7 +150,7 @@ colorscheme gruvbox
 
 " Flutter
 let g:dart_format_on_save = 1
-"nnoremap nmap <leader>a  <Plug>(coc-codeaction-selected)
+let g:lsc_auto_map = v:true
 
 
 "-------------------------------------------------LIGHTLINE CONFIG
@@ -238,7 +238,7 @@ command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile')
 
 "-------------------------------------------GLOBAL COC EXPLORER EXTENSIONS
 
-let g:coc_global_extensions = ['coc-emmet', 'coc-css', 'coc-html', 'coc-json', 'coc-prettier', 'coc-tsserver', 'coc-pyright', 'coc-explorer', 'coc-go']
+let g:coc_global_extensions = ['coc-emmet', 'coc-css', 'coc-html', 'coc-json', 'coc-prettier', 'coc-tsserver', 'coc-pyright', 'coc-explorer', 'coc-go', 'coc-dart']
 
 "-------------------------------------------------RAINBOW PARENTHESIS
 
