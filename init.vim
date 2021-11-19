@@ -92,9 +92,12 @@ Plug 'voldikss/vim-floaterm'
 "Clap Filer
 Plug 'liuchengxu/vim-clap', { 'do': { -> clap#installer#force_download() } }
 
+"" Github Copilot
+Plug 'github/copilot.vim'
+
 call plug#end()
 
-"--------------------------------------------SHORTCUTS PLUGINS AND VIM
+  "--------------------------------------------SHORTCUTS PLUGINS AND VIM
 set encoding=UTF-8
 nnoremap <leader>w :w <CR>
 nnoremap <C-w> :q <CR>
