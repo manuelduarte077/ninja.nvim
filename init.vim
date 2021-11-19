@@ -1,6 +1,8 @@
 "-------------------------------VIM CONFIGURATION----------------------------
 syntax on
 filetype plugin indent on
+
+set noerrorbells                                              " Don't add sounds for errors
 set nocompatible
 set mouse=a
 set number
@@ -15,11 +17,12 @@ set ruler
 set noshowmode
 set showmatch 
 set sw=2
-let mapleader = " "
 set laststatus=2
 set backspace=2
 set guioptions-=T
 set guioptions-=L
+
+let mapleader = " "
 
 imap jk <Esc>
 imap <C-c> <Esc>l
@@ -32,10 +35,14 @@ nnoremap <silent> <C-right> :wincmd l<CR>
 nnoremap <silent> <C-up> :wincmd k<CR> 
 nnoremap <silent> <C-down> :wincmd j<CR>
 
+nnoremap <leader>fe :CocCommand flutter.emulators <CR>
+nnoremap <leader>fd :below new output:///flutter-dev <CR>
+
+
 call plug#begin()
 
 "Themes
-Plug 'morhetz/gruvbox'
+Plug 'nmorhetz/gruvbox'
   Plug 'katawful/kat.vim'
   Plug 'ayu-theme/ayu-vim'
   Plug 'sainnhe/gruvbox-material'
@@ -152,6 +159,7 @@ colorscheme gruvbox
 let g:dart_format_on_save = 1
 let g:lsc_auto_map = v:true
 
+let g:dartfmt_options = ['--fix', '--line-length 120']
 
 "-------------------------------------------------LIGHTLINE CONFIG
 
@@ -393,11 +401,16 @@ set hidden
 set shortmess+=c
 set updatetime=300
 
+" Coc
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
+
+" Format Code 
 xmap <leader>f  <Plug>(coc-format-selected)
+
+" Ver la docuementacion 
 nnoremap <silent> K :call <SID>show_documentation()<CR>
 
 function! s:show_documentation()
