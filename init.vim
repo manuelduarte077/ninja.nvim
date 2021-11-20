@@ -479,6 +479,8 @@ let g:coc_global_extensions = [
   \ 'coc-omnisharp',
   \ 'coc-sql',
   \ 'coc-db',
+  \ 'coc-java',
+  \ 'coc-javascript',
   \ ]
 
 
