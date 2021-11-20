@@ -15,7 +15,7 @@ Here you found a neovim config based in lua for Neovim
 Screenshots
 -----------
 
-![AstroVim](./docs/image.PNG)
+![NinJaVim](./docs/image.PNG)
 
 Requirements for install this?
 ------------------------------
@@ -34,8 +34,9 @@ Go to your Neovim Config directory
 
 -	Windows Powershell `cd "$env:LOCALAPPDATA\nvim"`
 
-After this you need clone the repository with this command `git clone -b astro https://github.com/TeoDev1611/AstroVim.git .`
+After this you need clone the repository with this command `git clone -b astro https://github.com/manuelduarte077/ninja.nvim.`
 
+Install Packer ...
 And enter to Neovim and run `:PackerSync`
 
 ### Automaticall script?
@@ -52,5 +53,3 @@ This config have support for preview Markdown with live reload you need make thi
 And done! you need run this for preview `MarkdownPreview`
 
 ---
-
-Made with :heart: in Ecuador
