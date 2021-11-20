@@ -108,6 +108,9 @@ Plug 'hrsh7th/vim-vsnip-integ'
 " Add VSCode Plugins
 Plug 'Neevash/awesome-flutter-snippets'
 
+" React Native code snippets
+Plug 'tellijo/vim-react-native-snippets'
+
 call plug#end()
 
 
@@ -121,6 +124,13 @@ nnoremap <leader>fq :FlutterQuit<cr>
 nnoremap <leader>fr :FlutterHotReload<cr>
 nnoremap <leader>fR :FlutterHotRestart<cr>
 nnoremap <leader>fD :FlutterVisualDebug<cr>
+
+
+" Add key-bindings:
+
+imap <expr> <C-j>   vsnip#available(1)  ? '<Plug>(vsnip-expand)'         : '<C-j>'
+imap <expr> <C-l>   vsnip#available(1)  ? '<Plug>(vsnip-expand-or-jump)' : '<C-l>'
+smap <expr> <C-l>   vsnip#available(1)  ? '<Plug>(vsnip-expand-or-jump)' : '<C-l>'
 
 let g:dart_format_on_save = 1
 
