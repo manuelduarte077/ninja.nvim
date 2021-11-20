@@ -101,6 +101,12 @@ Plug 'thosakwe/vim-flutter'
 Plug 'natebosch/vim-lsc'
 Plug 'natebosch/vim-lsc-dart'
 
+" vim-vsnip
+Plug 'hrsh7th/vim-vsnip'
+Plug 'hrsh7th/vim-vsnip-integ'
+
+" Add VSCode Plugins
+Plug 'Neevash/awesome-flutter-snippets'
 
 call plug#end()
 
@@ -122,6 +128,7 @@ let g:dartfmt_options = ['--fix', '--line-length 120']
 
 "--------------------------------------------SHORTCUTS PLUGINS AND VIM
 set encoding=UTF-8
+set ft=javascript
 
 nnoremap <leader>fe :CocCommand flutter.emulators <CR>
 nnoremap <leader>fd :below new output:///flutter-dev <CR>
