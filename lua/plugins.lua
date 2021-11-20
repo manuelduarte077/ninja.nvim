@@ -321,7 +321,6 @@ return packer.startup(function()
     config = function()
       vim.cmd 'call astro#cocstart()'
     end,
-    
     'github/copilot.vim',
     event = 'VimEnter',
   }
