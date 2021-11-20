@@ -1,4 +1,4 @@
-astro.nvim -> Neovim Config
+ninja.nvim -> Neovim Config
 ===========================
 
 ---
@@ -15,7 +15,7 @@ Here you found a neovim config based in lua for Neovim
 Screenshots
 -----------
 
-![AstroVim](./docs/image.PNG)
+![NinjaNvim](./docs/image.PNG)
 
 Requirements for install this?
 ------------------------------
