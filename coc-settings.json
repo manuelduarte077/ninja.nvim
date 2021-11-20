@@ -3,12 +3,12 @@
     "css",
     "Markdown",
     "html",
-    "python",
     "javascript",
     "c++", 
     "go", 
     "rust", 
-    "dart"
+    "dart",
+    "python"
   ],
   // coc-explorer
   "explorer.openAction.for.directory": "expandOrCollapse",

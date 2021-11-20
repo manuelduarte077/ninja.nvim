@@ -86,7 +86,7 @@ Plug 'voldikss/vim-floaterm'
 
 "Clap Filer
 Plug 'liuchengxu/vim-clap', { 'do': { -> clap#installer#force_download() } }
-
+ 
 "" Github Copilot
 Plug 'github/copilot.vim'
 
@@ -116,9 +116,15 @@ nnoremap <leader>fr :FlutterHotReload<cr>
 nnoremap <leader>fR :FlutterHotRestart<cr>
 nnoremap <leader>fD :FlutterVisualDebug<cr>
 
+let g:dart_format_on_save = 1
+
+let g:dartfmt_options = ['--fix', '--line-length 120']
 
 "--------------------------------------------SHORTCUTS PLUGINS AND VIM
 set encoding=UTF-8
+
+nnoremap <leader>fe :CocCommand flutter.emulators <CR>
+nnoremap <leader>fd :below new output:///flutter-dev <CR>
 nnoremap <leader>w :w <CR>
 nnoremap <C-w> :q <CR>
 nnoremap <leader>q :q <CR>
@@ -141,6 +147,8 @@ let g:gruvbox_material_background = 'hard'
 let g:gruvbox_material_disable_italic_comment = 1
 let g:gruvbox_contrast_dark = 'hard'
 let ayucolor="dark"
+
+
 colorscheme gruvbox 
 
 "-------------------------------------------------LIGHTLINE CONFIG
@@ -228,7 +236,7 @@ command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile')
 
 "-------------------------------------------GLOBAL COC EXPLORER EXTENSIONS
 
-let g:coc_global_extensions = ['coc-emmet', 'coc-css', 'coc-html', 'coc-json', 'coc-prettier', 'coc-tsserver', 'coc-pyright', 'coc-explorer', 'coc-go']
+" let g:coc_global_extensions = ['coc-emmet', 'coc-css', 'coc-html', 'coc-json', 'coc-prettier', 'coc-tsserver', 'coc-pyright', 'coc-explorer', 'coc-go']
 
 "-------------------------------------------------RAINBOW PARENTHESIS
 
@@ -404,6 +412,28 @@ endfunction
 nmap <leader>f  <Plug>(coc-format-selected)
 autocmd CursorHold * silent call CocActionAsync('highlight')
 
+
+
+let g:coc_global_extensions = [
+  \ 'coc-snippets',
+  \ 'coc-tsserver',
+  \ 'coc-eslint', 
+  \ 'coc-prettier', 
+  \ 'coc-json', 
+  \ 'coc-flutter',
+  \ 'coc-snippets',
+  \ 'coc-yaml',
+  \ 'coc-tslint-plugin',
+  \ 'coc-tsserver',
+  \ 'coc-emmet',
+  \ 'coc-css',
+  \ 'coc-html',
+  \ 'coc-json',
+  \ 'coc-go',
+  \ 'coc-rust',
+  \ 'coc-explorer',
+  \ 'coc-pyright',
+  \ ]
 
 
 
