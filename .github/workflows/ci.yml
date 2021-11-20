@@ -2,9 +2,9 @@ name: FmtAstro
 
 on:
   push:
-    branches: [astro]
+    branches: [main]
   pull_request:
-    branches: [astro]
+    branches: [main]
 
 jobs:
   fmt:
