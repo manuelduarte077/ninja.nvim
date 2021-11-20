@@ -336,4 +336,9 @@ return packer.startup(function()
   use {
     'posva/vim-vue',
   }
+  
+  -- flutter-tools
+  use {'akinsho/flutter-tools.nvim', requires = 'nvim-lua/plenary.nvim'}
+
+
 end)
