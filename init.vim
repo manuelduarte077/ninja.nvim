@@ -93,7 +93,29 @@ Plug 'github/copilot.vim'
 "" WakaTime
 Plug 'wakatime/vim-wakatime'
 
+"" Dart Languaje
+Plug 'dart-lang/dart-vim-plugin'
+
+"" Dart/Flutter
+Plug 'thosakwe/vim-flutter'
+Plug 'natebosch/vim-lsc'
+Plug 'natebosch/vim-lsc-dart'
+
+
 call plug#end()
+
+
+"--------------------------------------------Enable Flutter Menu
+" call FlutterMenu()
+
+" Some of these key choices were arbitrary;
+" it's just an example.
+nnoremap <leader>fa :FlutterRun<cr>
+nnoremap <leader>fq :FlutterQuit<cr>
+nnoremap <leader>fr :FlutterHotReload<cr>
+nnoremap <leader>fR :FlutterHotRestart<cr>
+nnoremap <leader>fD :FlutterVisualDebug<cr>
+
 
 "--------------------------------------------SHORTCUTS PLUGINS AND VIM
 set encoding=UTF-8
