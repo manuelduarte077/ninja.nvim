@@ -101,6 +101,15 @@ Plug 'thosakwe/vim-flutter'
 Plug 'natebosch/vim-lsc'
 Plug 'natebosch/vim-lsc-dart'
 
+" vim-vsnip
+Plug 'hrsh7th/vim-vsnip'
+Plug 'hrsh7th/vim-vsnip-integ'
+
+" Add VSCode Plugins
+Plug 'Neevash/awesome-flutter-snippets'
+
+" React Native code snippets
+Plug 'tellijo/vim-react-native-snippets'
 
 call plug#end()
 
@@ -116,12 +125,20 @@ nnoremap <leader>fr :FlutterHotReload<cr>
 nnoremap <leader>fR :FlutterHotRestart<cr>
 nnoremap <leader>fD :FlutterVisualDebug<cr>
 
+
+" Add key-bindings:
+
+imap <expr> <C-j>   vsnip#available(1)  ? '<Plug>(vsnip-expand)'         : '<C-j>'
+imap <expr> <C-l>   vsnip#available(1)  ? '<Plug>(vsnip-expand-or-jump)' : '<C-l>'
+smap <expr> <C-l>   vsnip#available(1)  ? '<Plug>(vsnip-expand-or-jump)' : '<C-l>'
+
 let g:dart_format_on_save = 1
 
 let g:dartfmt_options = ['--fix', '--line-length 120']
 
 "--------------------------------------------SHORTCUTS PLUGINS AND VIM
 set encoding=UTF-8
+set ft=javascript
 
 nnoremap <leader>fe :CocCommand flutter.emulators <CR>
 nnoremap <leader>fd :below new output:///flutter-dev <CR>
