@@ -5,5 +5,4 @@ require 'sets'
 require 'ui.colors'
 require 'maps'
 
-require("flutter-tools").setup{} -- use defaults
 

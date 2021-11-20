@@ -53,4 +53,3 @@ And done! you need run this for preview `MarkdownPreview`
 
 ---
 
-Made with :heart: in Ecuador

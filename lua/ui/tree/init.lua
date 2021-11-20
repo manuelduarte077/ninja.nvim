@@ -18,7 +18,7 @@ tree.setup {
   ignore_ft_on_setup = { 'alpha' },
   view = {
     width = 30,
-    side = 'left',
+    side = 'right',
     auto_resize = true,
   },
 }
