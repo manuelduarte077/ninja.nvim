@@ -10,12 +10,14 @@ Here you found me neovim config
 What is this?
 -------------
 
+
+
 Here you found a neovim config based in lua for Neovim
 
 Screenshots
 -----------
 
-![NinjaNvim](./docs/image.PNG)
+![AstroVim](./docs/image.PNG)
 
 Requirements for install this?
 ------------------------------
@@ -53,3 +55,4 @@ And done! you need run this for preview `MarkdownPreview`
 
 ---
 
+Made with :heart: in Ecuador
