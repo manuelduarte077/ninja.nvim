@@ -1,37 +1,56 @@
-![Logo NeoVim](https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Neovim-logo.svg/1280px-Neovim-logo.svg.png)
+astro.nvim -> Neovim Config
+===========================
 
-## For install this configuration you need a NerdFont and Vim-Plug
-# An example Screen Shot 
+---
 
-![Captura de los Plugins](docs/plugins4.png)
+![Made for Neovim](https://img.shields.io/badge/Made%20for%20Neovim-by%20Teo-blue?style=for-the-badge&logo=neovim)
 
-![Captura 1](docs/plugins2.png)
+Here you found me neovim config
 
+What is this?
+-------------
 
+Here you found a neovim config based in lua for Neovim
 
-## How install
+Screenshots
+-----------
 
-```bash
-git clone https://github.com/manuelduarte077/nvim
-```
+![AstroVim](./docs/image.PNG)
 
+Requirements for install this?
+------------------------------
 
- ```bash
- Paste in your folder
- ```
+-	Git
+-	Neovim 0.5+
+-	RipGrep
+-	Fd
 
- ```bash
-Install Vim Plug
- ```
+How can install this?
+---------------------
 
- ```bash
- Run the command :PlugInstall
-  ```
+Go to your Neovim Config directory
 
- ```
- Exit of vim or neovim and all is installed
- ```
+-	MacOS and Linux `cd $HOME/.config/nvim`
 
-By: Manuel Duarte
+-	Windows Powershell `cd "$env:LOCALAPPDATA\nvim"`
 
+After this you need clone the repository with this command `git clone -b astro https://github.com/TeoDev1611/AstroVim.git .`
 
+And enter to Neovim and run `:PackerSync`
+
+### Automaticall script?
+
+Working in this if you want more this faster can you make a pull request
+
+### Markdown support
+
+This config have support for preview Markdown with live reload you need make this:
+
+-	Open any Markdown file `nvim README.md`
+-	Run this command into the Markdown file `call mkdp#util#install()`
+
+And done! you need run this for preview `MarkdownPreview`
+
+---
+
+Made with :heart: in Ecuador
