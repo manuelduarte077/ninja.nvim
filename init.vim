@@ -90,6 +90,8 @@ Plug 'liuchengxu/vim-clap', { 'do': { -> clap#installer#force_download() } }
 "" Github Copilot
 Plug 'github/copilot.vim'
 
+"" WakaTime
+Plug 'wakatime/vim-wakatime'
 
 call plug#end()
 
