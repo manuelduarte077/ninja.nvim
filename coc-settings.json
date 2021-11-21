@@ -25,7 +25,9 @@
   "explorer.file.showHiddenFiles": false,
   "explorer.file.column.clip.copy": "",
   "explorer.file.column.clip.cut": "",
-  "explorer.width": 25,
+  "explorer.width": 30, 
+  "explorer.position": "right",
+  "explorer.floating.border.enable": true,
   "explorer.file.hiddenRules": {
     "extensions": ["o", "a", "obj", "pyc"],
     "filenames": ["\\.byebug+", "\\.DS_Store|"],
