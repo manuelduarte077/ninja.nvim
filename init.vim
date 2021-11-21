@@ -1,6 +1,8 @@
 "---------------------------------VIM CONFIGURATION----------------------------
 syntax on
+
 filetype plugin indent on
+
 set nocompatible
 set mouse=a
 set number
@@ -20,6 +22,11 @@ set laststatus=2
 set backspace=2
 set guioptions-=T
 set guioptions-=L
+
+" Highlight search results when using /
+set hlsearch
+
+
 imap jk <Esc>
 imap <C-c> <Esc>l
 xnoremap K :move '<-2<CR>gv-gv
@@ -39,6 +46,21 @@ Plug 'morhetz/gruvbox'
   Plug 'ayu-theme/ayu-vim'
   Plug 'sainnhe/gruvbox-material'
 Plug 'pineapplegiant/spaceduck', { 'branch': 'main' }
+
+
+Plug 'arzg/vim-colors-xcode'
+
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'OmniSharp/omnisharp-vim'
+Plug 'mhinz/vim-signify'
+Plug 'nickspoons/vim-sharpenup'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'tpope/vim-dadbod'
+Plug 'kristijanhusak/vim-dadbod-ui'
+Plug 'vim-scripts/dbext.vim'
+Plug 'dyng/ctrlsf.vim'
+
 
 "Indent Line
 Plug 'Yggdroot/indentLine'
@@ -166,9 +188,13 @@ let g:gruvbox_contrast_dark = 'hard'
 let ayucolor="dark"
 
 
-colorscheme gruvbox 
+ " colorscheme gruvbox
+" use awesome Xcode dark color scheme (for some reason this only works if I specify it at the end of the file)
+colorscheme xcodedark
 
-"-------------------------------------------------LIGHTLINE CONFIG
+
+
+ "-------------------------------------------------LIGHTLINE CONFIG
 
 let g:lightline = {
     \'colorscheme':'ayu',
@@ -450,7 +476,102 @@ let g:coc_global_extensions = [
   \ 'coc-rust',
   \ 'coc-explorer',
   \ 'coc-pyright',
+  \ 'coc-omnisharp',
+  \ 'coc-sql',
+  \ 'coc-db',
+  \ 'coc-java',
+  \ 'coc-javascript',
   \ ]
 
 
+" ========= airline settings start ======================
 
+" to see the full path of the editing file
+let g:airline#extensions#tabline#formatter = 'unique_tail'
+
+" show branch information
+let g:airline#extensions#branch#enabled = 1
+let g:airline_theme='badwolf'
+
+if !exists('g:airline_symbols')
+  let g:airline_symbols = {}
+endif
+
+" unicode symbols
+let g:airline_left_sep = '»'
+let g:airline_left_sep = '▶'
+let g:airline_right_sep = '«'
+let g:airline_right_sep = '◀'
+let g:airline_symbols.crypt = '🔒'
+let g:airline_symbols.linenr = '☰'
+let g:airline_symbols.linenr = '␊'
+let g:airline_symbols.linenr = '␤'
+let g:airline_symbols.linenr = '¶'
+let g:airline_symbols.maxlinenr = ''
+let g:airline_symbols.maxlinenr = '㏑'
+let g:airline_symbols.branch = '⎇'
+let g:airline_symbols.paste = 'ρ'
+let g:airline_symbols.paste = 'Þ'
+let g:airline_symbols.paste = '∥'
+let g:airline_symbols.spell = 'Ꞩ'
+let g:airline_symbols.notexists = 'Ɇ'
+let g:airline_symbols.whitespace = 'Ξ'
+
+" powerline symbols
+let g:airline_left_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_right_alt_sep = ''
+let g:airline_symbols.branch = ''
+let g:airline_symbols.readonly = ''
+let g:airline_symbols.linenr = '☰'
+let g:airline_symbols.maxlinenr = ''
+let g:airline_symbols.dirty='⚡'
+
+let g:airline#extensions#tabline#enabled = 1
+
+
+" ========= airline settings end ========================
+
+" =============== OmniSharp settings start===============
+" OmniSharp won't work without this setting
+filetype plugin on
+
+" Use Roslyin and also better performance than HTTP
+let g:OmniSharp_server_stdio = 1
+let g:omnicomplete_fetch_full_documentation = 1
+
+" Timeout in seconds to wait for a response from the server
+let g:OmniSharp_timeout = 30
+
+" this will make it so any subsequent C# files that you open are using the same solution and you aren't prompted again (so you better choose the right solution the first time around :) )
+let g:OmniSharp_autoselect_existing_sln = 1
+
+let g:OmniSharp_popup_options = {
+\ 'highlight': 'Normal',
+\ 'padding': [1],
+\ 'border': [1]
+\}
+
+
+" =================vim Sharpenup settings start==========
+" note that using CTRL isn't feasible so we will use z instead, I chose z because it's the closest key to left ctrl
+let g:sharpenup_map_prefix = '.'
+" =================vim Sharpenup settings end============
+
+" ================ dyng/ctrlsf.vim settings start ==============
+" Ctrl + f, f
+nmap <C-F>f <Plug>CtrlSFPrompt
+" ================ dyng/ctrlsf.vim settings end ================
+
+" Bookmarks:
+" It's best to use vim's native bookmarks:
+" https://www.thegeekstuff.com/2009/02/how-to-add-bookmarks-inside-vi-and-vim-editor/
+" I personally use numbers because they are easier to remember and are global
+
+" fix colors
+set t_Co=256
+
+
+"Disable unsafe commands since we are allowing project specific .vimrc file execution
+set secure
