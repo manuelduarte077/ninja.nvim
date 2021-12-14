@@ -23,6 +23,11 @@ set backspace=2
 set guioptions-=T
 set guioptions-=L
 
+set incsearch
+set colorcolumn=120
+set backspace=indent,eol,start
+highlight ColorColumn ctermbg=0 guibg=lightgrey
+
 " Highlight search results when using /
 set hlsearch
 
@@ -37,6 +42,9 @@ nnoremap <silent> <C-left> :wincmd h<CR>
 nnoremap <silent> <C-right> :wincmd l<CR>
 nnoremap <silent> <C-up> :wincmd k<CR> 
 nnoremap <silent> <C-down> :wincmd j<CR>
+
+" Seleccionar todo
+map <C-a> <esc>ggVG<CR>
 
 call plug#begin()
 
@@ -325,7 +333,7 @@ let g:coc_explorer_global_presets = {
 \      'root-uri': '%APPDATA%\Local\nvim\coc-settings.json',
 \   },
 \   'tab': {
-\     'position': 'tab',
+\     'position': 'right',
 \     'quit-on-open': v:true,
 \   },
 \   'floating': {
