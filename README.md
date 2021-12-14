@@ -93,12 +93,16 @@ Damos click en la descargar y damos siguiente siguiente siguiente y cuando pida 
 
 ### Configurar el editor
 ```bash
-C:\Users\UserName\AppData\Local\nvim
+C:\Users\UserName\AppData\Local\
 ```
 Una vez en la carpeta puedes clonar el proyecto o crear un archivo llamado init.vim para la configuración desde 0.
 
 ### Clonar el proyecto
 - Tener instalado Node para descargar puedes hacerlo aquí Descarga [](https://nodejs.org/es/)
+
+- Crear la carpeta
+
+mkdir nvim
 
 - Navegar hasta la carpeta nvim
 
