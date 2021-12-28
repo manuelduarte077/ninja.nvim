@@ -1,14 +1,17 @@
 {
   "coc.preferences.formatOnSaveFiletypes": [
     "css",
-    "Markdown",
+    "json",
+    "ts", 
+    "js",
+    "tsx",
     "html",
+    "typescript",
     "javascript",
     "c++", 
     "go", 
     "rust", 
-    "dart",
-    "python"
+    "dart"
   ],
   // coc-explorer
   "explorer.openAction.for.directory": "expandOrCollapse",

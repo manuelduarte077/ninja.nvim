@@ -69,7 +69,6 @@ Plug 'kristijanhusak/vim-dadbod-ui'
 Plug 'vim-scripts/dbext.vim'
 Plug 'dyng/ctrlsf.vim'
 
-
 "Indent Line
 Plug 'Yggdroot/indentLine'
 
@@ -484,9 +483,7 @@ let g:coc_global_extensions = [
   \ 'coc-rust',
   \ 'coc-explorer',
   \ 'coc-pyright',
-  \ 'coc-omnisharp',
   \ 'coc-sql',
-  \ 'coc-db',
   \ 'coc-java',
   \ 'coc-javascript',
   \ ]
