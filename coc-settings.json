@@ -3,12 +3,13 @@
     "css",
     "Markdown",
     "html",
+    "python",
     "javascript",
+    "typescript",
     "c++", 
     "go", 
     "rust", 
-    "dart",
-    "python"
+    "dart"
   ],
   // coc-explorer
   "explorer.openAction.for.directory": "expandOrCollapse",
@@ -139,7 +140,8 @@
   "diagnostic.infoSign": "●",
   "diagnostic.hintSign": "○",
   "coc.preferences.colorSupport": false,
-  
+
+
   "go.goplsEnv": {
     "GOOS": "js",
     "GOARCH": "wasm",
