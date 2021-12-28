@@ -18,6 +18,7 @@ set sw=2
 let mapleader = " "
 set laststatus=2
 set backspace=2
+set shiftwidth=2
 set guioptions-=T
 set guioptions-=L
 
@@ -25,6 +26,9 @@ set incsearch
 set colorcolumn=120
 set backspace=indent,eol,start
 highlight ColorColumn ctermbg=0 guibg=lightgrey
+
+"" Theme
+
 
 " Highlight search results when using /
 set hlsearch
@@ -47,14 +51,20 @@ map <C-a> <esc>ggVG<CR>
 
 call plug#begin()
 
-"Themes
+
+"-------------------------------------------------------------------------------- Themes
 Plug 'morhetz/gruvbox'
   Plug 'katawful/kat.vim'
   Plug 'ayu-theme/ayu-vim'
   Plug 'sainnhe/gruvbox-material'
 Plug 'pineapplegiant/spaceduck', { 'branch': 'main' }
 
-"Indent Line
+"" Theme 1 
+Plug 'mangeshrex/uwu.vim'
+Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
+Plug 'haishanh/night-owl.vim'
+
+" Indent Line
 Plug 'Yggdroot/indentLine'
 
 "ICONS
@@ -164,11 +174,19 @@ nnoremap <leader>bd :bdelete<CR>
 
 "---------------------------------------------THEME CONFIG
 
-if exists('+termguicolors')
+" if exists('+termguicolors')
+
+
+  " set termguicolors
+" endif
+
+if has('nvim') || has('termguicolors')
   let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
   let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
   set termguicolors
 endif
+
+
 let g:gruvbox_material_palette = 'mix'
 let g:kat_theme = "dark"
 let g:gruvbox_material_cursor = 'orange'
@@ -177,12 +195,12 @@ let g:gruvbox_material_disable_italic_comment = 1
 let g:gruvbox_contrast_dark = 'hard'
 let ayucolor="dark"
 
-colorscheme gruvbox 
+colorscheme challenger_deep
 
 "-------------------------------------------------LIGHTLINE CONFIG
 
 let g:lightline = {
-    \'colorscheme':'ayu',
+    \'colorscheme': 'challenger_deep',
     \ 'active': {
     \   'tabline': 0,
     \   'left': [['mode', 'paste'], ['gitbranch'], ['readonly', 'filename', 'modified']],
@@ -264,7 +282,7 @@ command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile')
 
 "-------------------------------------------GLOBAL COC EXPLORER EXTENSIONS
 
-let g:coc_global_extensions = ['coc-emmet', 'coc-javascript', 'coc-rust', 'coc-css', 'coc-html', 'coc-yaml', 'coc-snippets', 'coc-flutter', 'coc-flutter-tools', 'coc-rust-analyzer', 'coc-json', 'coc-prettier', 'coc-tsserver', 'coc-tslint-plugin', 'coc-pyright', 'coc-explorer', 'coc-go',  'coc-eslint']
+let g:coc_global_extensions = ['coc-emmet', 'coc-javascript', 'coc-rust', 'coc-css', 'coc-html', 'coc-yaml', 'coc-snippets', 'coc-flutter', 'coc-flutter-tools', 'coc-rust-analyzer', 'coc-json', 'coc-tsserver', 'coc-tslint-plugin', 'coc-pyright', 'coc-explorer', 'coc-go',  'coc-eslint']
 
 "-------------------------------------------------RAINBOW PARENTHESIS
 
