@@ -1,13 +1,11 @@
 {
   "coc.preferences.formatOnSaveFiletypes": [
     "css",
-    "json",
-    "ts", 
-    "js",
-    "tsx",
+    "Markdown",
     "html",
-    "typescript",
+    "python",
     "javascript",
+    "typescript",
     "c++", 
     "go", 
     "rust", 
@@ -142,7 +140,8 @@
   "diagnostic.infoSign": "●",
   "diagnostic.hintSign": "○",
   "coc.preferences.colorSupport": false,
-  
+
+
   "go.goplsEnv": {
     "GOOS": "js",
     "GOARCH": "wasm",

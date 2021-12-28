@@ -1,8 +1,6 @@
 "---------------------------------VIM CONFIGURATION----------------------------
 syntax on
-
 filetype plugin indent on
-
 set nocompatible
 set mouse=a
 set number
@@ -31,7 +29,6 @@ highlight ColorColumn ctermbg=0 guibg=lightgrey
 " Highlight search results when using /
 set hlsearch
 
-
 imap jk <Esc>
 imap <C-c> <Esc>l
 xnoremap K :move '<-2<CR>gv-gv
@@ -41,10 +38,12 @@ vnoremap > >gv
 nnoremap <silent> <C-left> :wincmd h<CR>
 nnoremap <silent> <C-right> :wincmd l<CR>
 nnoremap <silent> <C-up> :wincmd k<CR> 
+
 nnoremap <silent> <C-down> :wincmd j<CR>
 
 " Seleccionar todo
 map <C-a> <esc>ggVG<CR>
+
 
 call plug#begin()
 
@@ -54,20 +53,6 @@ Plug 'morhetz/gruvbox'
   Plug 'ayu-theme/ayu-vim'
   Plug 'sainnhe/gruvbox-material'
 Plug 'pineapplegiant/spaceduck', { 'branch': 'main' }
-
-
-Plug 'arzg/vim-colors-xcode'
-
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'OmniSharp/omnisharp-vim'
-Plug 'mhinz/vim-signify'
-Plug 'nickspoons/vim-sharpenup'
-Plug 'ctrlpvim/ctrlp.vim'
-Plug 'tpope/vim-dadbod'
-Plug 'kristijanhusak/vim-dadbod-ui'
-Plug 'vim-scripts/dbext.vim'
-Plug 'dyng/ctrlsf.vim'
 
 "Indent Line
 Plug 'Yggdroot/indentLine'
@@ -115,7 +100,7 @@ Plug 'voldikss/vim-floaterm'
 
 "Clap Filer
 Plug 'liuchengxu/vim-clap', { 'do': { -> clap#installer#force_download() } }
- 
+
 "" Github Copilot
 Plug 'github/copilot.vim'
 
@@ -140,8 +125,8 @@ Plug 'Neevash/awesome-flutter-snippets'
 " React Native code snippets
 Plug 'tellijo/vim-react-native-snippets'
 
-call plug#end()
 
+call plug#end()
 
 "--------------------------------------------Enable Flutter Menu
 " call FlutterMenu()
@@ -153,7 +138,6 @@ nnoremap <leader>fq :FlutterQuit<cr>
 nnoremap <leader>fr :FlutterHotReload<cr>
 nnoremap <leader>fR :FlutterHotRestart<cr>
 nnoremap <leader>fD :FlutterVisualDebug<cr>
-
 
 " Add key-bindings:
 
@@ -167,7 +151,6 @@ let g:dartfmt_options = ['--fix', '--line-length 120']
 
 "--------------------------------------------SHORTCUTS PLUGINS AND VIM
 set encoding=UTF-8
-set ft=javascript
 
 nnoremap <leader>fe :CocCommand flutter.emulators <CR>
 nnoremap <leader>fd :below new output:///flutter-dev <CR>
@@ -194,14 +177,9 @@ let g:gruvbox_material_disable_italic_comment = 1
 let g:gruvbox_contrast_dark = 'hard'
 let ayucolor="dark"
 
+colorscheme gruvbox 
 
- " colorscheme gruvbox
-" use awesome Xcode dark color scheme (for some reason this only works if I specify it at the end of the file)
-colorscheme xcodedark
-
-
-
- "-------------------------------------------------LIGHTLINE CONFIG
+"-------------------------------------------------LIGHTLINE CONFIG
 
 let g:lightline = {
     \'colorscheme':'ayu',
@@ -286,7 +264,7 @@ command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile')
 
 "-------------------------------------------GLOBAL COC EXPLORER EXTENSIONS
 
-" let g:coc_global_extensions = ['coc-emmet', 'coc-css', 'coc-html', 'coc-json', 'coc-prettier', 'coc-tsserver', 'coc-pyright', 'coc-explorer', 'coc-go']
+let g:coc_global_extensions = ['coc-emmet', 'coc-javascript', 'coc-rust', 'coc-css', 'coc-html', 'coc-yaml', 'coc-snippets', 'coc-flutter', 'coc-flutter-tools', 'coc-rust-analyzer', 'coc-json', 'coc-prettier', 'coc-tsserver', 'coc-tslint-plugin', 'coc-pyright', 'coc-explorer', 'coc-go',  'coc-eslint']
 
 "-------------------------------------------------RAINBOW PARENTHESIS
 
@@ -332,7 +310,7 @@ let g:coc_explorer_global_presets = {
 \      'root-uri': '%APPDATA%\Local\nvim\coc-settings.json',
 \   },
 \   'tab': {
-\     'position': 'right',
+\     'position': 'tab',
 \     'quit-on-open': v:true,
 \   },
 \   'floating': {
@@ -461,122 +439,3 @@ endfunction
 
 nmap <leader>f  <Plug>(coc-format-selected)
 autocmd CursorHold * silent call CocActionAsync('highlight')
-
-
-
-let g:coc_global_extensions = [
-  \ 'coc-snippets',
-  \ 'coc-tsserver',
-  \ 'coc-eslint', 
-  \ 'coc-prettier', 
-  \ 'coc-json', 
-  \ 'coc-flutter',
-  \ 'coc-snippets',
-  \ 'coc-yaml',
-  \ 'coc-tslint-plugin',
-  \ 'coc-tsserver',
-  \ 'coc-emmet',
-  \ 'coc-css',
-  \ 'coc-html',
-  \ 'coc-json',
-  \ 'coc-go',
-  \ 'coc-rust',
-  \ 'coc-explorer',
-  \ 'coc-pyright',
-  \ 'coc-sql',
-  \ 'coc-java',
-  \ 'coc-javascript',
-  \ ]
-
-
-" ========= airline settings start ======================
-
-" to see the full path of the editing file
-let g:airline#extensions#tabline#formatter = 'unique_tail'
-
-" show branch information
-let g:airline#extensions#branch#enabled = 1
-let g:airline_theme='badwolf'
-
-if !exists('g:airline_symbols')
-  let g:airline_symbols = {}
-endif
-
-" unicode symbols
-let g:airline_left_sep = '»'
-let g:airline_left_sep = '▶'
-let g:airline_right_sep = '«'
-let g:airline_right_sep = '◀'
-let g:airline_symbols.crypt = '🔒'
-let g:airline_symbols.linenr = '☰'
-let g:airline_symbols.linenr = '␊'
-let g:airline_symbols.linenr = '␤'
-let g:airline_symbols.linenr = '¶'
-let g:airline_symbols.maxlinenr = ''
-let g:airline_symbols.maxlinenr = '㏑'
-let g:airline_symbols.branch = '⎇'
-let g:airline_symbols.paste = 'ρ'
-let g:airline_symbols.paste = 'Þ'
-let g:airline_symbols.paste = '∥'
-let g:airline_symbols.spell = 'Ꞩ'
-let g:airline_symbols.notexists = 'Ɇ'
-let g:airline_symbols.whitespace = 'Ξ'
-
-" powerline symbols
-let g:airline_left_sep = ''
-let g:airline_left_alt_sep = ''
-let g:airline_right_sep = ''
-let g:airline_right_alt_sep = ''
-let g:airline_symbols.branch = ''
-let g:airline_symbols.readonly = ''
-let g:airline_symbols.linenr = '☰'
-let g:airline_symbols.maxlinenr = ''
-let g:airline_symbols.dirty='⚡'
-
-let g:airline#extensions#tabline#enabled = 1
-
-
-" ========= airline settings end ========================
-
-" =============== OmniSharp settings start===============
-" OmniSharp won't work without this setting
-filetype plugin on
-
-" Use Roslyin and also better performance than HTTP
-let g:OmniSharp_server_stdio = 1
-let g:omnicomplete_fetch_full_documentation = 1
-
-" Timeout in seconds to wait for a response from the server
-let g:OmniSharp_timeout = 30
-
-" this will make it so any subsequent C# files that you open are using the same solution and you aren't prompted again (so you better choose the right solution the first time around :) )
-let g:OmniSharp_autoselect_existing_sln = 1
-
-let g:OmniSharp_popup_options = {
-\ 'highlight': 'Normal',
-\ 'padding': [1],
-\ 'border': [1]
-\}
-
-
-" =================vim Sharpenup settings start==========
-" note that using CTRL isn't feasible so we will use z instead, I chose z because it's the closest key to left ctrl
-let g:sharpenup_map_prefix = '.'
-" =================vim Sharpenup settings end============
-
-" ================ dyng/ctrlsf.vim settings start ==============
-" Ctrl + f, f
-nmap <C-F>f <Plug>CtrlSFPrompt
-" ================ dyng/ctrlsf.vim settings end ================
-
-" Bookmarks:
-" It's best to use vim's native bookmarks:
-" https://www.thegeekstuff.com/2009/02/how-to-add-bookmarks-inside-vi-and-vim-editor/
-" I personally use numbers because they are easier to remember and are global
-
-" fix colors
-set t_Co=256
-
-
-"Disable unsafe commands since we are allowing project specific .vimrc file execution
-set secure
