@@ -41,30 +41,30 @@ Here you found me neovim config
 ## Installation
 
 ### Descargar NeoVim
-Para Windows podemos instalar el package manager [Chocolatey](https://chocolatey.org/install) que es la opción que recomiendo procedamos a instalar con choco:
+For Windows we can use the installer packagde manager [Chocolatey](https://chocolatey.org/install) this is the option that I recommended with choco
 
-- Instalar Chocolatey
+- Installing Chocolatey
 
-Este paso lo podemos omitir si ya tienes instalado chocolatey para eso ejecuta este comando en powershell.
+We can skip this step by installing chocolatey to execute this command in powershell.
 
 ```bash
 choco -v
 ```
 
-En el caso qde ue no instalamos chocolatey con este comando pero el Powershell debería estar como administrador
+In this case, we install chocolatey with this command in Powershell should be the administrator 
 
 ```bash
 Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 ```
 
-Ahora que esta instalado cerramos el powershell y lo volvemos a abrir como administrador y proseguimos con este comando
+After the installing we can close the powershell and then we re open the admin in order to continue the with the command
 
 ``` bash
 choco install neovim -y
 ```
 
 
-### Instalar el package manager
+### Installing the package
 
 Ahora procedemos a instalar el package manager más famoso y maduro llamado Vim Plug una vez llegado a ese sitio corremos el siguiente comando en Powershell como administrador
 
