@@ -11,11 +11,11 @@ Here you found me neovim config
 
 - **Intelljsense** [NativeLSP](https://github.com/neovim/nvim-lspconfig) you can select this in the manager settings for lua native lsp [here](https://github.com/TeoDev1611/AstroVim/blob/rocket/lua/lsp/lsp-servers/init.lua) 
 
-- **Comments** The comment tool what use is [vim-commentary](https://github.com/tpope/vim-commentary) this can be activate with gcc and gc can you see the documentation for this amazing tool in the repository all settings are the default.
+- **Comments** The comment tool what use is [vim-commentary](https://github.com/tpope/vim-commentary) this can be activated it with gcc and gc can you see the documentation for this amazing tool in the repository all settings are the default.
 
 - **Pairs** For the pairs in the brackets i use [autopairs](https://github.com/steelsojka/pears.nvim)
 
-- **Languages Supported** Any question how setup a language can you open a issue for help you :v:
+- **Languages Supported** Any question regarding how to set up a language can you open a issue for help you :v:
   - Dart
   - Flutter
   - Rust
