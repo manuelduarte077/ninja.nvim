@@ -15,7 +15,7 @@ Here you found me neovim config
 
 - **Pairs** For the pairs in the brackets i use [autopairs](https://github.com/steelsojka/pears.nvim)
 
-- **Languages Supported** Any question regarding how to set up a language can you open a issue for help you :v:
+- **Languages Supported** Any question regarding how to set up a language can you open an issue to help you out :v:
   - Dart
   - Flutter
   - Rust
@@ -40,79 +40,79 @@ Here you found me neovim config
 
 ## Installation
 
-### Descargar NeoVim
-Para Windows podemos instalar el package manager [Chocolatey](https://chocolatey.org/install) que es la opción que recomiendo procedamos a instalar con choco:
+### Download NeoVim
+For Windows we can install the package manager [Chocolatey](https://chocolatey.org/install) this is the option that I recommend following to isntall with choco:
 
-- Instalar Chocolatey
+- Install Chocolatey
 
-Este paso lo podemos omitir si ya tienes instalado chocolatey para eso ejecuta este comando en powershell.
+We can skip this step if you have installed chocolatey, you can execute this command in powershell.
 
 ```bash
 choco -v
 ```
 
-En el caso qde ue no instalamos chocolatey con este comando pero el Powershell debería estar como administrador
+If you can install chocolatey, you can use this command in Powershell using the administrador
 
 ```bash
 Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 ```
 
-Ahora que esta instalado cerramos el powershell y lo volvemos a abrir como administrador y proseguimos con este comando
+After the installing, close the powershell and re open the administrador to continue with this command
 
 ``` bash
 choco install neovim -y
 ```
 
 
-### Instalar el package manager
+### Install package manager
 
-Ahora procedemos a instalar el package manager más famoso y maduro llamado Vim Plug una vez llegado a ese sitio corremos el siguiente comando en Powershell como administrador
+Now, we can proceed installing the most famous package manager called Vim Plug once it gets the site. We close the next command using Powershell like administrador
 
 ```bash
 iwr -useb https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim |`
     ni "$(@($env:XDG_DATA_HOME, $env:LOCALAPPDATA)[$null -eq $env:XDG_DATA_HOME])/nvim-data/site/autoload/plug.vim" -Force
 ```
 
-Una vez terminado el comando proseguimos con la instalación de git.
+Once it is done, we use the command to continue with the git installation 
 
-### Instalación de Git
-PODEMOS OMITIR ESTE PASO SI YA TIENES INSTALADO GIT lo puedes comprobar con:
 
+### Git installation
+We can skip this step if you have installed Git and you could check with this:
 ```bash
 git --version
 ```
 
-La pregunta es para que instalamos git por que la mayoría de package managers se basan en git por eso para evitar errores
+Wondering why git was installed, to avoid errors in the package managers based on git
 
-Vamos a este link Descarga de [Git](https://git-scm.com/)
+Please go to this link to download [Git](https://git-scm.com/)
 
-Damos click en la descargar y damos siguiente siguiente siguiente y cuando pida el editor seleccionamos Vim y listo.
+Click download and then next next next. When it is asking the editor, you select the Vim and ready.
 
-### Configurar el editor
+### Set up the editor
 ```bash
 C:\Users\UserName\AppData\Local\
 ```
-Una vez en la carpeta puedes clonar el proyecto o crear un archivo llamado init.vim para la configuración desde 0.
+Once you get the folder, you may clone the project or create a file called init.vim to set up from 0.
 
-### Clonar el proyecto
-- Tener instalado Node para descargar puedes hacerlo aquí Descarga [](https://nodejs.org/es/)
+### Clone the proyecto
+- Installed Node, you can get it here [](https://nodejs.org/es/)
 
-- Crear la carpeta
+- Move the folder
 
 mkdir nvim
 
-- Navegar hasta la carpeta nvim
+- Browse until the file nvim
 
 ```bash
 cd $HOME\AppData\Local\nvim
 ```
 
-- Despues ejecutar este comando
+- After executing this command 
 
 ```bash
 git clone https://github.com/manuelduarte077/ninja.nvim .
 ```
-- Finalmente ingrese a neovim para instalar y compilar el empaquetador con esto:
+- You can finally add neovim to install and compiled packer with this:
 
 ```bash
 :PlugInstall
